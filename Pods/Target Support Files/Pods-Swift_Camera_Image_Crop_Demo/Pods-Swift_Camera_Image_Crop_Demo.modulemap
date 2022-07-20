@@ -1,0 +1,6 @@
+framework module Pods_Swift_Camera_Image_Crop_Demo {
+  umbrella header "Pods-Swift_Camera_Image_Crop_Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}

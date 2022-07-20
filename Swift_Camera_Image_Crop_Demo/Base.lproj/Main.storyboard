@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M5V-PZ-CSP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="94d-PZ-0VS">
+            <objects>
+                <viewController id="M5V-PZ-CSP" customClass="MainViewController" customModule="Swift_Camera_Image_Crop_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uEj-kp-KbN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="m5A-P0-xxH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.83588576158940397" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndm-Uv-IKg">
+                                <rect key="frame" x="207" y="453" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="162" translatesAutoresizingMaskIntoConstraints="NO" id="BgT-ht-VgQ">
+                                <rect key="frame" x="66" y="740" width="282" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7p-GR-cVk">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="BR7-ir-JB9"/>
+                                            <constraint firstAttribute="width" constant="60" id="feb-a0-4Qe"/>
+                                        </constraints>
+                                        <state key="normal" image="camera">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openCamera:" destination="M5V-PZ-CSP" eventType="touchUpInside" id="7eL-Bh-9ur"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fn-Pz-Hh0">
+                                        <rect key="frame" x="222" y="0.0" width="60" height="60"/>
+                                        <state key="normal" image="photo-gallery">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openLibrary:" destination="M5V-PZ-CSP" eventType="touchUpInside" id="aXg-3x-KvF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on camera icon for Camera or Tap on library icon for  photo library " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bI-x3-uwq">
+                                <rect key="frame" x="66" y="820" width="282" height="31.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hr6-eQ-amS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m5A-P0-xxH" firstAttribute="leading" secondItem="uEj-kp-KbN" secondAttribute="leading" id="5Bo-wk-QRg"/>
+                            <constraint firstItem="Ndm-Uv-IKg" firstAttribute="centerY" secondItem="Hr6-eQ-amS" secondAttribute="centerY" id="AZi-IB-R6x"/>
+                            <constraint firstItem="m5A-P0-xxH" firstAttribute="top" secondItem="uEj-kp-KbN" secondAttribute="top" id="Bjn-Wb-NmD"/>
+                            <constraint firstItem="Ndm-Uv-IKg" firstAttribute="centerX" secondItem="Hr6-eQ-amS" secondAttribute="centerX" id="CgV-CK-qwk"/>
+                            <constraint firstAttribute="bottom" secondItem="m5A-P0-xxH" secondAttribute="bottom" id="LqG-lO-Y5q"/>
+                            <constraint firstItem="9bI-x3-uwq" firstAttribute="width" secondItem="BgT-ht-VgQ" secondAttribute="width" id="Zuh-6C-c4V"/>
+                            <constraint firstItem="m5A-P0-xxH" firstAttribute="trailing" secondItem="uEj-kp-KbN" secondAttribute="trailing" id="cZ8-E3-H0G"/>
+                            <constraint firstItem="9bI-x3-uwq" firstAttribute="top" secondItem="BgT-ht-VgQ" secondAttribute="bottom" constant="20" id="oxK-61-ocE"/>
+                            <constraint firstItem="9bI-x3-uwq" firstAttribute="centerX" secondItem="BgT-ht-VgQ" secondAttribute="centerX" id="v6e-Hs-5cj"/>
+                            <constraint firstItem="Hr6-eQ-amS" firstAttribute="bottom" secondItem="BgT-ht-VgQ" secondAttribute="bottom" constant="62" id="w2J-dh-5dZ"/>
+                            <constraint firstItem="BgT-ht-VgQ" firstAttribute="centerX" secondItem="Hr6-eQ-amS" secondAttribute="centerX" id="xP5-0j-Q1K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="m5A-P0-xxH" id="Dzt-ZY-o7l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grp-kL-F6d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466.66666666666669" y="30.803571428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="128" height="128"/>
+        <image name="photo-gallery" width="128" height="128"/>
+        <image name="placeholder" width="104" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
